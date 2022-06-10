@@ -1,0 +1,23 @@
+[
+  {
+    "name": "auth-signin",
+    "path": "/auth/signin",
+    "component": "/home/wzvd9898/nuxtjs-ccma/pages/auth/signin.vue",
+    "chunkName": "pages/auth/signin",
+    "_name": "_936126da"
+  },
+  {
+    "name": "auth-signout",
+    "path": "/auth/signout",
+    "component": "/home/wzvd9898/nuxtjs-ccma/pages/auth/signout.vue",
+    "chunkName": "pages/auth/signout",
+    "_name": "_60af2e50"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/wzvd9898/nuxtjs-ccma/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_5ec2087c"
+  }
+]
