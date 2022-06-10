@@ -1,23 +1,30 @@
 [
   {
+    "name": "signin",
+    "path": "/signin",
+    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/signin.vue",
+    "chunkName": "pages/signin",
+    "_name": "_7c19cce7"
+  },
+  {
     "name": "auth-signin",
     "path": "/auth/signin",
-    "component": "/home/wzvd9898/nuxtjs-ccma/pages/auth/signin.vue",
+    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/auth/signin.vue",
     "chunkName": "pages/auth/signin",
-    "_name": "_936126da"
+    "_name": "_80ac5718"
   },
   {
     "name": "auth-signout",
     "path": "/auth/signout",
-    "component": "/home/wzvd9898/nuxtjs-ccma/pages/auth/signout.vue",
+    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/auth/signout.vue",
     "chunkName": "pages/auth/signout",
-    "_name": "_60af2e50"
+    "_name": "_fabc7ae2"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "/home/wzvd9898/nuxtjs-ccma/pages/index.vue",
+    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_5ec2087c"
+    "_name": "_1307a5c6"
   }
 ]

@@ -4,9 +4,10 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _936126da = () => interopDefault(import('../pages/auth/signin.vue' /* webpackChunkName: "pages/auth/signin" */))
-const _60af2e50 = () => interopDefault(import('../pages/auth/signout.vue' /* webpackChunkName: "pages/auth/signout" */))
-const _5ec2087c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _7c19cce7 = () => interopDefault(import('../pages/signin.vue' /* webpackChunkName: "pages/signin" */))
+const _80ac5718 = () => interopDefault(import('../pages/auth/signin.vue' /* webpackChunkName: "pages/auth/signin" */))
+const _fabc7ae2 = () => interopDefault(import('../pages/auth/signout.vue' /* webpackChunkName: "pages/auth/signout" */))
+const _1307a5c6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -20,16 +21,20 @@ export const routerOptions = {
   scrollBehavior,
 
   routes: [{
+    path: "/signin",
+    component: _7c19cce7,
+    name: "signin"
+  }, {
     path: "/auth/signin",
-    component: _936126da,
+    component: _80ac5718,
     name: "auth-signin"
   }, {
     path: "/auth/signout",
-    component: _60af2e50,
+    component: _fabc7ae2,
     name: "auth-signout"
   }, {
     path: "/",
-    component: _5ec2087c,
+    component: _1307a5c6,
     name: "index"
   }],
 
