@@ -10,6 +10,7 @@
             outlined
             flat
             title
+            color="transparent"
         >
 
             <v-img
@@ -22,7 +23,7 @@
             outlined
             flat
             title
-            color:white
+            color="transparent"
         >
             Cloud Cost Optimization
         </v-card>
