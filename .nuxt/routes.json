@@ -1,12 +1,5 @@
 [
   {
-    "name": "signin",
-    "path": "/signin",
-    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/signin.vue",
-    "chunkName": "pages/signin",
-    "_name": "_7c19cce7"
-  },
-  {
     "name": "auth-signin",
     "path": "/auth/signin",
     "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/auth/signin.vue",
