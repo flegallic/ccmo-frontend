@@ -4,8 +4,8 @@ export default {
   ssr: false,
   
   head: {
-    //titleTemplate: '%s - nuxtjs-ccma',
-    title: 'cloud cost management',
+    //titleTemplate: '%s - CCMO',
+    title: 'CCMO',
     htmlAttrs: {
       lang: 'en'
     },
