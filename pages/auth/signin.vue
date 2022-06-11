@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card class="d-flex justify-center mb-12" flat tile >
+    <v-card class="d-flex justify-center mb-12 pt-10" flat tile >
       <v-card class="pa-12 pt-14" outlined tile width="500" height="500">
         <signin />
       </v-card>

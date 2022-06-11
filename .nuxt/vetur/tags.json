@@ -4,5 +4,8 @@
   },
   "Signin": {
     "description": "Auto imported from components/signin.vue"
+  },
+  "Signup": {
+    "description": "Auto imported from components/signup.vue"
   }
 }

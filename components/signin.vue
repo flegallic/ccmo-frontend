@@ -27,7 +27,7 @@
           :disabled="!valid"
           color="blue darken-3"
           class="mr-2 white--text"
-          @click="login"
+          @click="signin"
           elevation="0" >sign in
         </v-btn>
 
@@ -37,6 +37,12 @@
           color="#CFD8DC"
           elevation="0" >Reset Form
         </v-btn>
+        <p class="pt-5"><a
+          @click="forgotPassword" 
+          class="text-decoration-none" >Forgot Password ?
+        </a></p>
+        
+
       </v-form>
       <v-snackbar v-model="snackbar" color="error">
         {{ snackbarText }}
@@ -72,14 +78,14 @@ export default {
     reset () {
       this.$refs.form.reset()
     },
-    login() {
+    signin() {
       let that = this
       this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
       .catch(function (error){
         that.snackbarText = error.message
         that.snackbar = true
       }).then((user) => {
-        //we are signed in
+        //authenticated
         $nuxt.$router.push('/')
       })
     },
@@ -98,7 +104,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

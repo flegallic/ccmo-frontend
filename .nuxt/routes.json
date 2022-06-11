@@ -14,6 +14,13 @@
     "_name": "_fabc7ae2"
   },
   {
+    "name": "auth-signup",
+    "path": "/auth/signup",
+    "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/auth/signup.vue",
+    "chunkName": "pages/auth/signup",
+    "_name": "_577faa2c"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "/home/zwvd9898/developments/nuxtjs-ccma/pages/index.vue",
