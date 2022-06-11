@@ -1,104 +1,33 @@
 <template>
-  <v-row align="center" justify="center" class="pt-16">
-    <v-card-title class="pb-12">
-      <h3>Already registered ? Sign-in</h3>    
-    </v-card-title>
-    <v-card-text>
-      <v-form align="center" ref="form" v-model="valid" lazy-validation @submit.prevent="" >
-        <v-text-field
-          v-model="auth.email"
-          :rules="emailRules"
-          label="Email"
-          required >
-        </v-text-field>
+  <div>
+    <v-card class="d-flex justify-center mb-12" flat tile >
+      <v-card class="pa-12 pt-14" outlined tile width="500" height="500">
+        <signin />
+      </v-card>
+      <v-card color="blue darken-3" class="pa-12 pt-16" outlined tile width="500" height="500">
+        <v-row justify="center" align="center" class="pt-16" >
+          <v-card-title class="pb-10">
+            <h3 class="text-right white--text">Hello, friends</h3>
+          </v-card-title>
+          <v-card-text class="font-weight-lighter">
+            <p class="text-center white--text">Learn about using the CCO dashboard to manage the visibility into cloud cost and find the best way to optimize your cloud resources management.</p>
+          </v-card-text>
 
-        <v-text-field
-          v-model="auth.password"
-          :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'"
-          :rules="passwordRules"
-          :type="show1 ? 'text' : 'password'"
-          label="Password"
-          hint="At least 8 characters"
-          required
-          @click:append="show1 = !show1" >
-        </v-text-field>
-
-        <v-btn
-          :disabled="!valid"
-          color="blue darken-3"
-          class="mr-2 white--text"
-          @click="login"
-          elevation="0" >sign in
-        </v-btn>
-
-        <v-btn
-          class="mr-2"
-          @click="reset"
-          color="#CFD8DC"
-          elevation="0" >Reset Form
-        </v-btn>
-      </v-form>
-      <v-snackbar v-model="snackbar" color="error">
-        {{ snackbarText }}
-      </v-snackbar>
-    </v-card-text>
-  </v-row>
+          <v-card-actions>
+            <v-btn class="white--text" href="/auth/signup" outlined elevation="0" >sign up</v-btn>
+          </v-card-actions>
+        </v-row>
+      </v-card>
+    </v-card>
+  </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      valid: true,
-      show1: false,
-      snackbar: false,
-      snackbarText: 'No error message',
-      auth: {
-        email: '',
-        password: ''
-      },
-      passwordRules: [
-      (v) => !!v || "Password is required",
-      (v) => (v && v.length >= 8) || "Password must minimums 8 characters",
-      ],
-      emailRules: [
-        (v) => !!v || "Email is required",
-        (v) => /.+@.+\..+/.test(v) || "Email must be valid",
-      ],
-    }
-  },
-  methods: {
-    //function to reset form
-    reset () {
-      this.$refs.form.reset()
+import signin from "@/components/signin.vue"
+
+  export default {
+    components: {
+      signin,
     },
-    login() {
-      let that = this
-      this.$fire.auth.signInWithEmailAndPassword(this.auth.email, this.auth.password)
-      .catch(function (error){
-        that.snackbarText = error.message
-        that.snackbar = true
-      }).then((user) => {
-        //we are signed in
-        $nuxt.$router.push('/')
-      })
-    },
-    forgotPassword() {
-      let that = this
-      this.$fire.auth.sendPasswordResetEmail(this.auth.email)
-      .then(function (){
-        that.snackbarText = 'reset link sent to ' + that.auth.email
-        that.snackbar = true
-      })
-      .catch(function (error) {
-        that.snackbarText = error.message
-        that.snackbar = true
-      })
-    }
   }
-}
 </script>
-
-<style>
-
-</style>
