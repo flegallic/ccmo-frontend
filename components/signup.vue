@@ -148,7 +148,7 @@
                 email: userCredential.user.email,
                 displayName: this.name
               };
-              setTimeout( () => this.$router.push({ path: '/'}), 15000);
+              setTimeout( () => this.$router.push({ path: '/'}), 7000);
             })
             .catch(function (error){
               that.snackbarText = error.message
