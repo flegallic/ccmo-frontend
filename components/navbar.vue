@@ -21,7 +21,7 @@
       flat
       title
       color="transparent">
-      <p color="white" >Cloud Cost Optimization</p>
+      <p color="white" >Cloud Cost Management and Optimization</p>
     </v-card>
   </v-card>
 </template>
