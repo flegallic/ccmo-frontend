@@ -9,10 +9,11 @@ const actions = {
         path: '/auth/signin',
       })
     } else {
-      const { uid, email } = authUser
+      const { uid, email, displayName } = authUser
       state.commit('SET_USER', {
         uid,
         email,
+        displayName
       })
     }
   },

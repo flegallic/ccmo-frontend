@@ -6,6 +6,7 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _80ac5718 = () => interopDefault(import('../pages/auth/signin.vue' /* webpackChunkName: "pages/auth/signin" */))
 const _fabc7ae2 = () => interopDefault(import('../pages/auth/signout.vue' /* webpackChunkName: "pages/auth/signout" */))
+const _577faa2c = () => interopDefault(import('../pages/auth/signup.vue' /* webpackChunkName: "pages/auth/signup" */))
 const _1307a5c6 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
@@ -27,6 +28,10 @@ export const routerOptions = {
     path: "/auth/signout",
     component: _fabc7ae2,
     name: "auth-signout"
+  }, {
+    path: "/auth/signup",
+    component: _577faa2c,
+    name: "auth-signup"
   }, {
     path: "/",
     component: _1307a5c6,
